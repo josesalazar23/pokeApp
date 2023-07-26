@@ -1,0 +1,292 @@
+:root {
+    --primario: rgba(84, 121, 177, 0.932);
+    --secundario: rgba(206, 205, 205, 0.418);
+    --blanco: #fff;
+    --negro: #000;
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  
+    background: linear-gradient(to right, #004e92, #d6647dfa); 
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+.navegacion {
+    background-color: var(--secundario);
+    padding: 2rem 8rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    font-size: 2.5rem;
+}
+
+
+
+.generationShown {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: var(--fuentePrincipal);
+    color: white;
+    font-size: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+    padding: 0 5rem;
+}
+
+@media (max-width: 540px) {
+    .media-query-420 .navegacion__enlace {
+        font-size: 2rem;
+      }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+    .grid :hover {
+        background-color: rgba(127, 165, 187, 0.986);
+    }
+    
+    .navegacion {
+        background-color: var(--secundario);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding:  3rem 2rem;
+        
+    }
+    
+    .navegacion__enlace {
+        margin-top: 0.1rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    .generationShown {
+        font-family: var(--fuentePrincipal);
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 960px) and (min-width: 540px) {
+    .media-query-820 .navegacion__enlace {
+        font-size: 2rem;
+      }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+    .grid :hover {
+        background-color: rgba(127, 165, 187, 0.986);
+    }
+    
+    .navegacion {
+        background-color: var(--secundario);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        padding: 3rem 5rem;
+        
+    }
+    
+    .navegacion__enlace {
+        margin-top: 0.1rem;
+        font-size: 1rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    .generationShown {
+        font-family: var(--fuentePrincipal);
+        color: white;
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 1024px) and (min-width: 960px) {
+    .media-query-820 .navegacion__enlace {
+        font-size: 2rem;
+      }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3rem;
+        padding: 0 5rem;
+    }
+
+    .grid :hover {
+        background-color: rgba(127, 165, 187, 0.986);
+    }
+    
+    .navegacion {
+        background-color: var(--secundario);
+        padding: 1rem 10rem;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
+    
+    .navegacion__enlace {
+        margin-top: 0.1rem;
+        padding: 0;
+    }
+
+    .generationShown {
+        font-family: var(--fuentePrincipal);
+        color: white;
+        font-size: 2rem;
+    }
+
+}
+
+.pokemon__card {
+    background-color: var(--secundario);
+    padding: 1rem;
+    border-radius: 5%;
+}
+.grid :hover {
+    background-color: rgba(127, 165, 187, 0.986);
+}
+
+.pokemon {
+    background-color: var(--secundario);
+}
+
+.pokemonUnidad {
+    background-color: var(--primario);
+    padding: 1rem;
+}
+
+.pokemon__image {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.pokemon__name {
+    font-size: 2.5rem;
+}
+
+.pokemon__type {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.pokemon__type p {
+    margin: 0 0.5rem;
+}
+
+.pokemon__name,
+.pokemon__type {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 5rem;
+}
+
+
+.select-field {
+    padding: 10px;
+    display: flex;
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+  
+.submit-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(49, 140, 192, 0.986);;
+    font-family: var(--fuentePrincipal);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.header-selected {
+    padding: 3rem 0;
+}

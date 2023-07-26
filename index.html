@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div>
+        <form id="form" action="#" method="GET">
+            <div class="header-selected">
+                <select 
+                        class="select-field"
+                        id="pokemonForType"
+                    >
+                        <option disabled selected value="fire"> Select Type</option>
+                        <option value="steel">Steel</option>
+                        <option value="water">water</option>
+                        <option value="bug">bug</option>
+                        <option value="dragon">dragon</option>
+                        <option value="electric">electric</option>
+                        <option value="ghost">ghost</option>
+                        <option value="fire">fire</option>
+                        <option value="fairy">fairy</option>
+                        <option value="ice">ice</option>
+                        <option value="fighting">fighting</option>
+                        <option value="normal">normal</option>
+                        <option value="grass">grass</option>
+                </select>
+                <input 
+                    type="submit"
+                    class="submit-button"
+                    value="search pokemon"
+                />
+            </div>
+        </form>
+    </div>
+    <nav class="navegacion media-query-420 media-query-820">
+        <a class="navegacion__enlace" id="Generation1" href="#">first generation</a>
+        <a class="navegacion__enlace" id="Generation2" href="#">second  generation</a>
+        <a class="navegacion__enlace" id="Generation3" href="#">third generation</a>
+        <a class="navegacion__enlace" id="Generation4" href="#">Fourth generation</a>
+        <a class="navegacion__enlace" id="Generation5" href="#">fifth generation</a>
+        <a class="navegacion__enlace" id="Generation6" href="#">sixth generation</a>
+    </nav>
+
+    <div>
+        <div class="generationShown" id="showGeneration"></div>
+        
+        <main id="content" class="grid">
+            
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
